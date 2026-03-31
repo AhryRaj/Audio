@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Audio Analysis</h1>
+        <div id="overallScoreContainer"></div>
+
+        <div class="metrics">
+            <div class="metric-card">
+                <h2>Speech Rate</h2>
+                <div class="metric-value" id="speechPace"></div>
+                <p class="metric-feedback" id="speechFeedback"></p>
+            </div>
+            <div class="metric-card">
+                <h2>Speech Gaps</h2>
+                <div class="metric-value" id="breakFrequency"></div>
+                <p class="metric-feedback" id="breakFreqFeedback"></p>
+            </div>
+            <div class="metric-card">
+                <h2>Gap Length</h2>
+                <div class="metric-value" id="breakDuration"></div>
+                <p class="metric-feedback" id="breakDurFeedback"></p>
+            </div>
+            <div class="metric-card">
+                <h2>Filler Words</h2>
+                <div class="metric-value" id="fillerBuzz"></div>
+                <p class="metric-feedback" id="fillerFeedback"></p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn">Start Recording</button>
+            <button id="stopBtn" disabled>Stop Recording</button>
+            <button id="analyzeBtn" disabled>Analyze All Streams</button>
+        </div>
+        <div class="status" id="recordingStatus">Ready to record</div>
+
+        <div class="recordings">
+            <h2>Recorded Streams</h2>
+            <div id="recordingsPlayback"></div>
+        </div>
+    </div>
+</body>
+</html>
